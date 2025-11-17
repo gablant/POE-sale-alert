@@ -1,0 +1,4 @@
+requests
+beautifulsoup4
+firebase-admin
+functions-framework # Only needed if you use the @functions_framework.cloud_event decorator
