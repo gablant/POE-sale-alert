@@ -1,0 +1,11 @@
+gcloud functions deploy checkPoESalesScraper ^
+  --gen2 ^
+  --runtime python39 ^
+  --entry-point check_poe_sales_api ^
+  --source functions ^
+  --region us-central1 ^
+  --trigger-http ^
+  --allow-unauthenticated ^
+  --set-secrets POE_SESSID_COOKIE=POE_SESSID_COOKIE:latest,POE_CF_CLEARANCE_COOKIE=POE_CF_CLEARANCE_COOKIE:latest ^
+  --project poe-sales-app ^
+  --timeout=300s
